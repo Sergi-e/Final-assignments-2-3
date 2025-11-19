@@ -44,5 +44,21 @@ public Speaker(String speakerName, String topic, String biography, String timesl
     public String getTimeslot() {
         return timeslot;
     }
-    
+    //to string method
+    @Override
+    public String toString() {
+        return "Speaker{" +
+                "speakerName='" + speakerName + '\'' +
+                ", topic='" + topic + '\'' +
+                ", biography='" + biography + '\'' +
+                ", timeslot='" + timeslot + '\'' +
+                '}';
+    }
+    // display method
+   public void showProfile() {
+    System.out.println("Speaker Name: " + speakerName 
+        + " is a dedicated professional in " + topic 
+        + ". Biography: " + biography 
+        + ". They will be speaking at " + timeslot + ".");
+    }
 }
