@@ -5,9 +5,9 @@ public class CareerFair{
     private String time;
     private String speaker;
     private double duration;
-    private String numOfCompanies;
+    private int numOfCompanies;
 public CareerFair(){}
-public CareerFair(String name, String location, String date, String time, String speaker, double duration, String numOfCompanies) {
+public CareerFair(String name, String location, String date, String time, String speaker, double duration, int numOfCompanies) {
         this.name = name;
         this.location=location;
         this.date = date;
@@ -41,7 +41,7 @@ public CareerFair(String name, String location, String date, String time, String
         this.duration = duration;
     }
 
-    public void setNumOfCompanies(String numOfCompanies) {
+    public void setNumOfCompanies(int numOfCompanies) {
         this.numOfCompanies = numOfCompanies;
     }
 
@@ -69,9 +69,10 @@ public CareerFair(String name, String location, String date, String time, String
         return duration;
     }
 
-    public String getNumOfCompanies() {
+    public int getNumOfCompanies() {
         return numOfCompanies;
     }
+    @Override
     public String toString() {
         return "CareerFair{" +
                 "name='" + name + '\'' +
