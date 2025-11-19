@@ -84,7 +84,7 @@ public CareerFair(String name, String location, String date, String time, String
                 ", numOfCompanies='" + numOfCompanies + '\'' +
                 '}';
     }
-    public void eventSummary(){
+    public void Summary(){
         System.out.print("The event Career Fair " + name + " will be held at " + location + " on " + date + " from " + time + ". The event will feature a speech by " + speaker + 
         " and will last for " + duration + " hours. There will be " + numOfCompanies + " companies participating in the fair.");
     }
