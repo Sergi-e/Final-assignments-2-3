@@ -1,4 +1,6 @@
-public class Company{
+public class Company {
+
+    // company details
     private String companyName;
     private String industry;
     private String repName;
@@ -6,8 +8,12 @@ public class Company{
     private String website;
     private int boothNumber;
 
-    public Company(){}
-    public Company(String companyName, String industry, String repName, String positionPresented, String website, int boothNumber) {
+    // default constructor
+    public Company() {}
+
+    // main constructor
+    public Company(String companyName, String industry, String repName, 
+                   String positionPresented, String website, int boothNumber) {
         this.companyName = companyName;
         this.industry = industry;
         this.repName = repName;
@@ -15,8 +21,8 @@ public class Company{
         this.website = website;
         this.boothNumber = boothNumber;
     }
-    //setters
 
+    // setters
     public void setCompanyName(String companyName) {
         this.companyName = companyName;
     }
@@ -40,8 +46,8 @@ public class Company{
     public void setBoothNumber(int boothNumber) {
         this.boothNumber = boothNumber;
     }
-    //getters
 
+    // getters
     public String getCompanyName() {
         return companyName;
     }
@@ -65,7 +71,8 @@ public class Company{
     public int getBoothNumber() {
         return boothNumber;
     }
-    //to  String method
+
+    // returns company info as a string
     @Override
     public String toString() {
         return "Company{" +
@@ -78,12 +85,12 @@ public class Company{
                 '}';
     }
 
-    // display method 
+    // prints a readable company profile
     public void showCompany() {
-    System.out.println("The company " + companyName + " operates in the " + industry +
-        ". It is hereby represented by " + repName + 
-        " who is presenting the position of " + positionPresented +
-        ". For more information, visit " + website +
-        ". Find their booth at number " + boothNumber + ".");
+        System.out.println("The company " + companyName + " operates in the " + industry +
+                " industry. It is represented by " + repName +
+                ", presenting the position of " + positionPresented +
+                ". For more info, visit " + website +
+                ". Booth number: " + boothNumber + ".");
     }
 }
