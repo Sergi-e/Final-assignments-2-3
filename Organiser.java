@@ -1,16 +1,23 @@
-public class Organiser{
+public class Organiser {
+
+    // organiser details
     private String organiserName;
     private String role;
     private String contactInfo;
     private String yearsOfExperience;
-public Organiser(){}
-public Organiser(String organiserName, String role, String contactInfo, String yearsOfExperience){
-    this.organiserName = organiserName;
-    this.role = role;
-    this.contactInfo = contactInfo;
-    this.yearsOfExperience = yearsOfExperience;
-}
-//setters
+
+    // default constructor
+    public Organiser() {}
+
+    // main constructor
+    public Organiser(String organiserName, String role, String contactInfo, String yearsOfExperience) {
+        this.organiserName = organiserName;
+        this.role = role;
+        this.contactInfo = contactInfo;
+        this.yearsOfExperience = yearsOfExperience;
+    }
+
+    // setters
     public void setOrganiserName(String organiserName) {
         this.organiserName = organiserName;
     }
@@ -26,8 +33,8 @@ public Organiser(String organiserName, String role, String contactInfo, String y
     public void setYearsOfExperience(String yearsOfExperience) {
         this.yearsOfExperience = yearsOfExperience;
     }
-//getters
 
+    // getters
     public String getOrganiserName() {
         return organiserName;
     }
@@ -43,7 +50,8 @@ public Organiser(String organiserName, String role, String contactInfo, String y
     public String getYearsOfExperience() {
         return yearsOfExperience;
     }
-    //to string method
+
+    // returns organiser info as a string
     @Override
     public String toString() {
         return "Organiser{" +
@@ -53,12 +61,12 @@ public Organiser(String organiserName, String role, String contactInfo, String y
                 ", yearsOfExperience='" + yearsOfExperience + '\'' +
                 '}';
     }
-    // display method
+
+    // prints a readable organiser profile
     public void organiserDetails() {
         System.out.println("The organiser " + organiserName + " holds the role of " + role +
-            " with " + yearsOfExperience + " years of experience. Contact info: " + contactInfo);
+                " with " + yearsOfExperience + " years of experience. Contact info: " + contactInfo);
     }
 }
-
 
 
