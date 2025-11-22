@@ -1,16 +1,23 @@
-public class Speaker{
+public class Speaker {
+
+    // speaker details
     private String speakerName;
     private String topic;
     private String biography;
     private String timeslot;
-public Speaker(){}
-public Speaker(String speakerName, String topic, String biography, String timeslot){
-    this.speakerName = speakerName;
-    this.topic = topic;
-    this.biography = biography;
-    this.timeslot = timeslot;
-}
-     //Setters 
+
+    // default constructor
+    public Speaker() {}
+
+    // main constructor
+    public Speaker(String speakerName, String topic, String biography, String timeslot) {
+        this.speakerName = speakerName;
+        this.topic = topic;
+        this.biography = biography;
+        this.timeslot = timeslot;
+    }
+
+    // setters
     public void setSpeakerName(String speakerName) {
         this.speakerName = speakerName;
     }
@@ -27,8 +34,7 @@ public Speaker(String speakerName, String topic, String biography, String timesl
         this.timeslot = timeslot;
     }
 
-    //getters
-
+    // getters
     public String getSpeakerName() {
         return speakerName;
     }
@@ -44,7 +50,8 @@ public Speaker(String speakerName, String topic, String biography, String timesl
     public String getTimeslot() {
         return timeslot;
     }
-    //to string method
+
+    // shows all speaker info
     @Override
     public String toString() {
         return "Speaker{" +
@@ -54,11 +61,12 @@ public Speaker(String speakerName, String topic, String biography, String timesl
                 ", timeslot='" + timeslot + '\'' +
                 '}';
     }
-    // display method
-   public void showProfile() {
-    System.out.println("Speaker Name: " + speakerName 
-        + " is a dedicated professional in " + topic 
-        + ". Biography: " + biography 
-        + ". They will be speaking at " + timeslot + ".");
+
+    // prints a simple profile
+    public void showProfile() {
+        System.out.println("Speaker Name: " + speakerName +
+                ". Topic: " + topic +
+                ". Biography: " + biography +
+                ". Speaking at: " + timeslot + ".");
     }
 }
