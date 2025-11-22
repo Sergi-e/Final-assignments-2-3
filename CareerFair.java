@@ -1,4 +1,6 @@
-public class CareerFair{
+public class CareerFair {
+
+    // event information
     private String name;
     private String location;
     private String date;
@@ -6,10 +8,15 @@ public class CareerFair{
     private String speaker;
     private double duration;
     private int numOfCompanies;
-public CareerFair(){}
-public CareerFair(String name, String location, String date, String time, String speaker, double duration, int numOfCompanies) {
+
+    // default constructor
+    public CareerFair() {}
+
+    // main constructor
+    public CareerFair(String name, String location, String date, String time,
+                      String speaker, double duration, int numOfCompanies) {
         this.name = name;
-        this.location=location;
+        this.location = location;
         this.date = date;
         this.time = time;
         this.speaker = speaker;
@@ -17,6 +24,7 @@ public CareerFair(String name, String location, String date, String time, String
         this.numOfCompanies = numOfCompanies;
     }
 
+    // setters
     public void setName(String name) {
         this.name = name;
     }
@@ -45,6 +53,7 @@ public CareerFair(String name, String location, String date, String time, String
         this.numOfCompanies = numOfCompanies;
     }
 
+    // getters
     public String getName() {
         return name;
     }
@@ -72,6 +81,8 @@ public CareerFair(String name, String location, String date, String time, String
     public int getNumOfCompanies() {
         return numOfCompanies;
     }
+
+    // returns event details
     @Override
     public String toString() {
         return "CareerFair{" +
@@ -81,11 +92,16 @@ public CareerFair(String name, String location, String date, String time, String
                 ", time='" + time + '\'' +
                 ", speaker='" + speaker + '\'' +
                 ", duration=" + duration +
-                ", numOfCompanies='" + numOfCompanies + '\'' +
+                ", numOfCompanies=" + numOfCompanies +
                 '}';
     }
-    public void Summary(){
-        System.out.print("The event Career Fair " + name + " will be held at " + location + " on " + date + " from " + time + ". The event will feature a speech by " + speaker + 
-        " and will last for " + duration + " hours. There will be " + numOfCompanies + " companies participating in the fair.");
+
+    // prints a short summary
+    public void summary() {
+        System.out.println("The career fair '" + name + "' will take place at " +
+                location + " on " + date + " starting at " + time +
+                ". The main speaker is " + speaker + ". The event lasts " +
+                duration + " hours and features " + numOfCompanies +
+                " participating companies.");
     }
 }
